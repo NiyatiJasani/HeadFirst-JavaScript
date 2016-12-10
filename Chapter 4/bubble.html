@@ -1,0 +1,80 @@
+</doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Factory test lab</title>
+
+    <script>
+        var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
+                      34, 55, 51, 52, 44, 51, 69, 64, 66, 65, 55, 52,
+                      46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];
+
+        var costs = [.25, .27, .25, .25, .25, .25,
+                     .33, .31, .25, .29, .27, .22,
+                     .31, .25, .25, .33, .21, .25,
+                     .25, .25, .28, .25, .24, .22,
+                     .20, .25, .30, .25, .24, .25,
+                     .25, .25, .27, .25, .26, .29];
+
+        function printGetHighestScore(scores) {
+            var highScore = 0;
+            var output;
+            for (var i = 0; i < scores.length; i++) {
+                output = "Bubble soution #" + i + "score: " + scores[i];
+                console.log(output);
+                if (scores[i] > highScore) {
+                    highScore = scores[i];
+                }
+
+            }
+            return highScore;
+        }
+
+        function getBestResults(scores, highScore) {
+            var bestSolutions = [];
+            for (var i = 0; i < scores.length; i++) {
+                if (scores[i] == highScore) {
+                    bestSolutions.push(i);
+                }
+
+            }
+            return bestSolutions;
+        }
+
+        function getMostCostEffectiveSolution(scores, costs, highscore) {
+            var cost = 100;
+            var index;
+
+            for (var i = 0; i < scores.length; i++) {
+                if (scores[i] == highScore) {
+                    if (cost > costs[i]) {
+                        index = i;
+                        cost = costs[i];
+                    }
+                }
+            }
+            return index;
+        }
+
+        var highScore = printGetHighestScore(scores);
+        console.log("Bubble tests: " + scores.length);
+        console.log("Highest bubble score: " + highScore);
+
+        var bestSolutions = getBestResults(scores, highScore);
+        console.log("Solutions with the highest score: " + bestSolutions);
+
+        var mostCostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
+        console.log("Bubble SOlution # " + mostCostEffective + "is the most cost effective");
+    </script>
+
+
+
+</head>
+
+
+</html>
+<!-- passgethighscore is called passing the scores arrat. We assign the value it returns to the variable highscore
+<!-- i = Bubble solution number //scores[i] = The score that bubble solution got -->
+<!-- new array that holds all bubble solutions that match the highest score -->
+<!-- new array used to store the bubbles soluton with the highgest score -->
