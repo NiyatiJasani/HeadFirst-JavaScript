@@ -1,0 +1,10 @@
+Variables: myDog, guests, pet, 
+
+function: dogYears,makeTea, speak, secret
+
+Built-in functions: alert, console.log, prompt
+
+Arguments: myDog, 4, guest, 'EarlGrey', 
+
+Parameters: dogName, age, kind, ups, tea 
+
