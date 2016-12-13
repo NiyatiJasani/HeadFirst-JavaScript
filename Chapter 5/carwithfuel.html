@@ -26,12 +26,16 @@
             mileage: 88000,
 
             started: false,
+            fuel: 0,
 
 
 
             start: function () {
-
-                this.started = true;
+                if (this.fuel == 0) {
+                    alert("the car is empty, please start filling up");
+                } else {
+                    this.started = true;
+                }
 
             },
 
@@ -42,6 +46,7 @@
                 this.started = false;
 
             },
+
 
             drive: function () {
                 if (this.started) {
@@ -66,13 +71,16 @@
             }
         };
 
-        fiat.addFuel(4);
+
 
         fiat.start();
-
         fiat.drive();
-
+        fiat.addFuel(2);
         fiat.start();
+        fiat.drive();
+        fiat.drive();
+        fiat.stop();
+
 
 
         for (var prop in fiat) {
