@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang=e n>
+
+<head>
+    <meta charset="utf-8">
+    <title>Planets</title>
+    <style>
+        .redtext {
+            color: red;
+        }
+    </style>
+    <script>
+        ///making changes in javascript hence the variable declared within script
+        function init() {
+            var planet = document.getElementById("greenplanet");
+            planet.innerHTML = "Red alert: hit by fire";
+            planet.setAttribute("class", "redtext");
+        }
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <h1>Green Planet</h1>
+    <p id="greenplanet"> All is dandy</p>
+    <p id="redpalnet">Nothing to report</p>
+    <p id="blueplanbet">All systems a-ok</p>
+</body>
+
+</html>
