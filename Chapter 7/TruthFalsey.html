@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Your HTML page</title>
+    <script>
+        var testThis;
+        if ([]) {
+            console.log("Yolo it is still true");
+        } else {
+            console.log("Work");
+        }
+
+        var element = document.getElementById("elementThatDoesntExist");
+        if (element) {
+            console.log("Truthy");
+        } else {
+            console.log("False");
+        }
+
+        var c = (false == 0); // true
+        var d = (false == ""); // true
+        var e = (0 == ""); // true
+    </script>
+</head>
+
+</html>

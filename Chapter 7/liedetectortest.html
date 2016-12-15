@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Your HTML page</title>
+    <script>
+        function lieDetectorTest() {
+            var lies = 0;
+
+            var stolenDiamond = {};
+            if (stolenDiamond) {
+                console.log("You stole the diamond");
+                lies++;
+            }
+            var car = {
+                keysInPocket: null
+            };
+            if (car.keysInPocket) {
+                console.log("uh oh, guess you stole the car");
+                lies++;
+            }
+            if (car.emptyGasTank) {
+                console.log("You drove the car after you stole it");
+                liess++;
+            }
+            var foundYouAtTheCrimeScene = [];
+            if (foundYouAtTheCrimeScene) {
+                console.log("A sure sign of guilt");
+                lies++;
+            }
+            //array item 0 is undefined
+            if (foundYouAtTheCrimeScene[0]) {
+                console.log("Caught with a stolen item");
+                lies++;
+            }
+            var yourName = " ";
+            if (yourName) {
+                console.log("Guess you lied about your name");
+                lies++;
+            }
+            return lies;
+        }
+        var numberOfLies = lieDetectorTest();
+        console.log("you told " + numberOfLies + " lies!");
+        if (numberOfLies >= 3) {
+            console.log("Guilty as charged");
+        }
+    </script>
+</head>
+
+</html>[[]]
